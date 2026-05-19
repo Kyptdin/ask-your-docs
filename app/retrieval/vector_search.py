@@ -1,16 +1,23 @@
 from langchain.tools import tool
 
 
-def make_retriever(vector_store):
-    @tool(response_format="content_and_artifact")
-    def retrieve_context(query: str):
-        """Retrieve information to help answer a query."""
-        print("Retrieving the content!")
-        retrieved_docs = vector_store.similarity_search(query, k=2)
-        serialized = "\n\n".join(
-            (f"Source: {doc.metadata}\nContent: {doc.page_content}")
-            for doc in retrieved_docs
-        )
-        return serialized, retrieved_docs
+class DocumentRetriever:
+    def __init__(self, vector_store, k: int = 2):
+        self.vector_store = vector_store
+        self.k = k
 
-    return retrieve_context
+    def as_tool(self):
+        vector_store = self.vector_store
+        k = self.k
+
+        @tool(response_format="content_and_artifact")
+        def retrieve_context(query: str):
+            """Retrieve information to help answer a query."""
+            retrieved_docs = vector_store.similarity_search(query, k=k)
+            serialized = "\n\n".join(
+                (f"Source: {doc.metadata}\nContent: {doc.page_content}")
+                for doc in retrieved_docs
+            )
+            return serialized, retrieved_docs
+
+        return retrieve_context
