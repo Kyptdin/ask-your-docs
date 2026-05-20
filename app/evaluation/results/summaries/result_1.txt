@@ -1,0 +1,27 @@
+==================================================
+Retrieval Metrics
+==================================================
+  MRR:               0.8267
+  nDCG:              0.7411
+  Keyword Coverage:  0.6058
+
+MRR by Category
+--------------------------------------------------
+  comparative                  0.7778  (n=3)
+  counting                     0.7222  (n=3)
+  factual / lookup             0.8333  (n=3)
+  holistic                     0.7778  (n=3)
+  negation                     0.7500  (n=2)
+  reasoning                    0.8333  (n=3)
+  spanning                     1.0000  (n=3)
+  temporal                     0.6667  (n=2)
+  unanswerable                 1.0000  (n=3)
+
+==================================================
+LLM-as-a-Judge Scores  (1–5 scale)
+==================================================
+  Accuracy         4.24 / 5
+  Relevance        4.68 / 5
+  Groundedness     4.32 / 5
+  Conciseness      4.24 / 5
+  Overall          4.28 / 5

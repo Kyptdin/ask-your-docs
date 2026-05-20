@@ -1,0 +1,34 @@
+==================================================
+Retrieval Metrics
+==================================================
+  MRR:               0.8267
+  nDCG:              0.7411
+  Keyword Coverage:  0.6515
+
+MRR by Category
+--------------------------------------------------
+  comparative                  0.7778  (n=3)
+  counting                     0.7222  (n=3)
+  factual / lookup             0.8333  (n=3)
+  holistic                     0.7778  (n=3)
+  negation                     0.7500  (n=2)
+  reasoning                    0.8333  (n=3)
+  spanning                     1.0000  (n=3)
+  temporal                     0.6667  (n=2)
+  unanswerable                 1.0000  (n=3)
+
+==================================================
+LLM-as-a-Judge Scores  (1–5 scale)
+==================================================
+  Accuracy         4.48 / 5
+  Relevance        4.88 / 5
+  Groundedness     4.64 / 5
+  Conciseness      4.40 / 5
+  Overall          4.56 / 5
+
+Low-score flag (≤2 on any criterion) — 3 question(s):
+--------------------------------------------------
+  [A:2  R:5  G:2  C:5]  'Compare the number of virtual page offset bits between the s'
+  [A:1  R:4  G:2  C:3]  'Which system has a larger virtual address space: the one des'
+  [A:2  R:3  G:2  C:3]  'Summarize all the specific answers for the wide width bits a'
+==================================================

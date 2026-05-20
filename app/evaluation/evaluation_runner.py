@@ -5,14 +5,14 @@ from pathlib import Path
 
 from evaluation.evaluator import Evaluator
 from evaluation.llm_judge import LLMJudge
-from evaluation.test_question import TestQuestion
+from evaluation.models.test_question import TestQuestion
 
-NUM_RAG_WORKERS = 10
-NUM_JUDGE_WORKERS = 10
+NUM_RAG_WORKERS = 6
+NUM_JUDGE_WORKERS = 6
 
 
 class EvaluationRunner:
-    DATASET_PATH = Path(__file__).parent / "golden_dataset.jsonl"
+    DATASET_PATH = Path(__file__).parent / "data" / "golden_dataset.jsonl"
 
     def __init__(self, retriever, agent_factory, llm_factory=None):
         self.retriever = retriever
@@ -153,7 +153,7 @@ class EvaluationRunner:
         return questions
 
     def _save_results(self, questions: list[TestQuestion]) -> None:
-        results_dir = Path(__file__).parent / "results"
+        results_dir = Path(__file__).parent / "results" / "data"
         results_dir.mkdir(exist_ok=True)
 
         metrics_path = results_dir / "metrics_results.jsonl"
@@ -189,52 +189,53 @@ class EvaluationRunner:
                 }) + "\n")
         print(f"Judge results saved to {judge_path}")
 
-    def _print_report(self, questions: list[TestQuestion]) -> None:
+    def _build_report(self, questions: list[TestQuestion]) -> str | None:
         scored = [tq for tq in questions if tq.metrics is not None]
         if not scored:
-            print("No results to report.")
-            return
+            return None
+
+        lines: list[str] = []
 
         overall_mrr = sum(tq.metrics.mrr for tq in scored) / len(scored)
         overall_ndcg = sum(tq.metrics.ndcg for tq in scored) / len(scored)
         overall_kw = sum(tq.metrics.keyword_coverage for tq in scored) / len(scored)
 
-        print("=" * 50)
-        print("Retrieval Metrics")
-        print("=" * 50)
-        print(f"  MRR:               {overall_mrr:.4f}")
-        print(f"  nDCG:              {overall_ndcg:.4f}")
-        print(f"  Keyword Coverage:  {overall_kw:.4f}")
+        lines += [
+            "=" * 50,
+            "Retrieval Metrics",
+            "=" * 50,
+            f"  MRR:               {overall_mrr:.4f}",
+            f"  nDCG:              {overall_ndcg:.4f}",
+            f"  Keyword Coverage:  {overall_kw:.4f}",
+            "",
+            "MRR by Category",
+            "-" * 50,
+        ]
 
         by_category: dict[str, list[float]] = {}
         for tq in scored:
             by_category.setdefault(tq.category, []).append(tq.metrics.mrr)
-
-        print()
-        print("MRR by Category")
-        print("-" * 50)
         for category, mrr_scores in sorted(by_category.items()):
             avg = sum(mrr_scores) / len(mrr_scores)
-            print(f"  {category:<28} {avg:.4f}  (n={len(mrr_scores)})")
+            lines.append(f"  {category:<28} {avg:.4f}  (n={len(mrr_scores)})")
 
-        # LLM-as-a-Judge report
         judged = [tq for tq in questions if tq.judge_result is not None]
         if not judged:
-            print("=" * 50)
-            return
+            lines.append("=" * 50)
+            return "\n".join(lines)
 
         def _avg(attr: str) -> float:
             return sum(getattr(tq.judge_result, attr).score for tq in judged) / len(judged)
 
-        print()
-        print("=" * 50)
-        print("LLM-as-a-Judge Scores  (1–5 scale)")
-        print("=" * 50)
-        criteria = ["accuracy", "relevance", "groundedness", "conciseness", "overall"]
-        for c in criteria:
-            print(f"  {c.capitalize():<16} {_avg(c):.2f} / 5")
+        lines += [
+            "",
+            "=" * 50,
+            "LLM-as-a-Judge Scores  (1–5 scale)",
+            "=" * 50,
+        ]
+        for c in ["accuracy", "relevance", "groundedness", "conciseness", "overall"]:
+            lines.append(f"  {c.capitalize():<16} {_avg(c):.2f} / 5")
 
-        # Spot-check: any answer scoring ≤ 2 on any criterion (excluding overall).
         low_scorers = [
             tq for tq in judged
             if any(
@@ -243,16 +244,29 @@ class EvaluationRunner:
             )
         ]
         if low_scorers:
-            print()
-            print(f"Low-score flag (≤2 on any criterion) — {len(low_scorers)} question(s):")
-            print("-" * 50)
+            lines += ["", f"Low-score flag (≤2 on any criterion) — {len(low_scorers)} question(s):", "-" * 50]
             for tq in low_scorers:
                 jr = tq.judge_result
-                row = {
-                    c: getattr(jr, c).score
-                    for c in ["accuracy", "relevance", "groundedness", "conciseness"]
-                }
+                row = {c: getattr(jr, c).score for c in ["accuracy", "relevance", "groundedness", "conciseness"]}
                 scores_str = "  ".join(f"{c[0].upper()}:{s}" for c, s in row.items())
-                print(f"  [{scores_str}]  {tq.question[:60]!r}")
+                lines.append(f"  [{scores_str}]  {tq.question[:60]!r}")
 
-        print("=" * 50)
+        lines.append("=" * 50)
+        return "\n".join(lines)
+
+    def _print_report(self, questions: list[TestQuestion]) -> None:
+        report = self._build_report(questions)
+        if report is None:
+            print("No results to report.")
+            return
+        print(report)
+        self._save_summary(report)
+
+    def _save_summary(self, report: str) -> None:
+        summaries_dir = Path(__file__).parent / "results" / "summaries"
+        summaries_dir.mkdir(parents=True, exist_ok=True)
+        existing = [p.stem for p in summaries_dir.glob("result_*.txt")]
+        next_n = max((int(s.split("_")[1]) for s in existing if s.split("_")[1].isdigit()), default=0) + 1
+        summary_path = summaries_dir / f"result_{next_n}.txt"
+        summary_path.write_text(report)
+        print(f"Summary saved to {summary_path}")

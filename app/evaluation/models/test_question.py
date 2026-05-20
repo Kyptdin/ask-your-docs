@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 
-from evaluation.eval_result import EvalResult
+from evaluation.models.eval_result import EvalResult
 from evaluation.evaluator import Evaluator
-from evaluation.judge_result import JudgeResult
+from evaluation.models.judge_result import JudgeResult
 
 
 @dataclass

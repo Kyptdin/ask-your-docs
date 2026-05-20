@@ -1,7 +1,7 @@
 import math
 import re
 
-from evaluation.eval_result import EvalResult
+from evaluation.models.eval_result import EvalResult
 
 
 class Evaluator:

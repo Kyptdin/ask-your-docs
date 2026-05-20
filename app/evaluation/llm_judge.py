@@ -2,7 +2,7 @@ from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage
 from pydantic import ValidationError
 
-from evaluation.judge_result import JudgeResult
+from evaluation.models.judge_result import JudgeResult
 
 _JUDGE_PROMPT = """\
 You are an expert evaluator. Analyze the model's answer and score it on each criterion.
