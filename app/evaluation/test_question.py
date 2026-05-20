@@ -14,6 +14,7 @@ class TestQuestion:
     answer_type: str
     difficulty: str
     category: str
+    generated_answer: str | None = field(default=None, init=False)
     metrics: EvalResult | None = field(default=None, init=False)
     judge_result: JudgeResult | None = field(default=None, init=False)
 

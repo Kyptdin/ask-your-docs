@@ -7,8 +7,8 @@ from evaluation.evaluator import Evaluator
 from evaluation.llm_judge import LLMJudge
 from evaluation.test_question import TestQuestion
 
-NUM_RAG_WORKERS = 4
-NUM_JUDGE_WORKERS = 2
+NUM_RAG_WORKERS = 10
+NUM_JUDGE_WORKERS = 10
 
 
 class EvaluationRunner:
@@ -39,6 +39,10 @@ class EvaluationRunner:
         judge_queue: queue.Queue = queue.Queue()
         completed_lock = threading.Lock()
         completed_count = 0
+        judged_lock = threading.Lock()
+        judged_count = 0
+        # Track how many answers enter judging (set once RAG stage finishes).
+        judge_total = 0
 
         # Stage 1 — RAG workers (consumers of rag_queue, producers to judge_queue)
         def rag_worker():
@@ -55,6 +59,7 @@ class EvaluationRunner:
                     docs = self.retriever.retrieve(tq.question)
                     retrieved_chunk_ids = [doc.metadata.get("chunk_id", "") for doc in docs]
                     generated_answer = agent.invoke(tq.question)
+                    tq.generated_answer = generated_answer
                     tq.compute_metrics(
                         generated_answer=generated_answer,
                         retrieved_chunk_ids=retrieved_chunk_ids,
@@ -73,11 +78,9 @@ class EvaluationRunner:
 
         # Stage 2 — Judge workers (consumers of judge_queue)
         def judge_worker(llm_judge: LLMJudge):
+            nonlocal judged_count, judge_total
             while True:
-                try:
-                    item = judge_queue.get(block=True, timeout=1)
-                except queue.Empty:
-                    break
+                item = judge_queue.get()
 
                 if item is None:
                     # Sentinel: signal this worker to stop.
@@ -92,8 +95,19 @@ class EvaluationRunner:
                             golden_answer=tq.golden_answer,
                             generated_answer=generated_answer,
                         )
+                        with judged_lock:
+                            judged_count += 1
+                            current = judged_count
+                            pending = judge_total
+                        status = f"{current}/{pending}" if pending else str(current)
+                        print(f"[JUDGE {status}] Judged: {tq.question[:60]!r}")
                     except Exception as e:
-                        print(f"[ERROR] Judge failed on {tq.question[:60]!r}: {e}")
+                        with judged_lock:
+                            judged_count += 1
+                            current = judged_count
+                            pending = judge_total
+                        status = f"{current}/{pending}" if pending else str(current)
+                        print(f"[JUDGE {status}][ERROR] {tq.question[:60]!r}: {e}")
                 judge_queue.task_done()
 
         # Start judge workers before RAG so they can consume items as soon as they appear.
@@ -122,6 +136,10 @@ class EvaluationRunner:
         for t in rag_threads:
             t.join()
 
+        # Now we know the exact number of answers entering the judge stage.
+        with judged_lock:
+            judge_total = sum(1 for tq in questions if tq.metrics is not None)
+
         # Send one sentinel per judge worker to shut them down cleanly.
         if judge_threads:
             for _ in judge_threads:
@@ -130,8 +148,46 @@ class EvaluationRunner:
             for t in judge_threads:
                 t.join()
 
+        self._save_results(questions)
         self._print_report(questions)
         return questions
+
+    def _save_results(self, questions: list[TestQuestion]) -> None:
+        results_dir = Path(__file__).parent / "results"
+        results_dir.mkdir(exist_ok=True)
+
+        metrics_path = results_dir / "metrics_results.jsonl"
+        with open(metrics_path, "w") as f:
+            for tq in questions:
+                if tq.metrics is None:
+                    continue
+                f.write(json.dumps({
+                    "question": tq.question,
+                    "category": tq.category,
+                    "generated_answer": tq.generated_answer,
+                    "mrr": tq.metrics.mrr,
+                    "ndcg": tq.metrics.ndcg,
+                    "keyword_coverage": tq.metrics.keyword_coverage,
+                }) + "\n")
+        print(f"Metrics results saved to {metrics_path}")
+
+        judge_path = results_dir / "judge_results.jsonl"
+        with open(judge_path, "w") as f:
+            for tq in questions:
+                if tq.judge_result is None:
+                    continue
+                jr = tq.judge_result
+                f.write(json.dumps({
+                    "question": tq.question,
+                    "category": tq.category,
+                    "generated_answer": tq.generated_answer,
+                    "accuracy": {"score": jr.accuracy.score, "reasoning": jr.accuracy.reasoning},
+                    "relevance": {"score": jr.relevance.score, "reasoning": jr.relevance.reasoning},
+                    "groundedness": {"score": jr.groundedness.score, "reasoning": jr.groundedness.reasoning},
+                    "conciseness": {"score": jr.conciseness.score, "reasoning": jr.conciseness.reasoning},
+                    "overall": {"score": jr.overall.score, "reasoning": jr.overall.reasoning},
+                }) + "\n")
+        print(f"Judge results saved to {judge_path}")
 
     def _print_report(self, questions: list[TestQuestion]) -> None:
         scored = [tq for tq in questions if tq.metrics is not None]

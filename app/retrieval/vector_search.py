@@ -2,7 +2,7 @@ from langchain.tools import tool
 
 
 class DocumentRetriever:
-    def __init__(self, vector_store, k: int = 2):
+    def __init__(self, vector_store, k: int = 6):
         self.vector_store = vector_store
         self.k = k
 

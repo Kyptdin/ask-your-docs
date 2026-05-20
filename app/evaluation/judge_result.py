@@ -1,14 +1,12 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, Field
 
 
-@dataclass
-class CriterionScore:
+class CriterionScore(BaseModel):
     reasoning: str
-    score: int
+    score: int = Field(ge=1, le=5)
 
 
-@dataclass
-class JudgeResult:
+class JudgeResult(BaseModel):
     accuracy: CriterionScore
     relevance: CriterionScore
     groundedness: CriterionScore
