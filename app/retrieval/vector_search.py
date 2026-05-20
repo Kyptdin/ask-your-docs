@@ -21,3 +21,6 @@ class DocumentRetriever:
             return serialized, retrieved_docs
 
         return retrieve_context
+
+    def retrieve(self, query: str) -> list:
+        return self.vector_store.similarity_search(query, k=self.k)

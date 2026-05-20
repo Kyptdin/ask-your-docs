@@ -1,30 +1,33 @@
-import os
+import argparse
 
-from dotenv import load_dotenv
-from langchain_pinecone import PineconeVectorStore, PineconeEmbeddings
-from langchain_ollama import ChatOllama
-from pinecone import Pinecone
+from config import build_dependencies
 
-from ingestion.rag_pipeline import DocumentIngester
-from retrieval.vector_search import DocumentRetriever
-from agent.rag_agent import RAGAgent
 
-load_dotenv()
+def main():
+    parser = argparse.ArgumentParser(description="Ask Your Docs RAG pipeline")
+    parser.add_argument("--ingest", action="store_true", help="Ingest the PDF before querying")
+    parser.add_argument(
+        "--provider",
+        choices=["ollama", "openai"],
+        default=None,
+        help="LLM backend to use (default: openai if OPENAI_API_KEY is set, else ollama)",
+    )
+    args = parser.parse_args()
 
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-embeddings = PineconeEmbeddings(
-    model=os.getenv("PINECONE_MODEL"),
-    pinecone_api_key=os.getenv("PINECONE_API_KEY"),
-)
-index = pc.Index(os.getenv("PINECONE_INDEX"))
-vector_store = PineconeVectorStore(embedding=embeddings, index=index)
-llm = ChatOllama(model=os.getenv("OLLAMA_MODEL"), temperature=0)
+    ingester, _, agent = build_dependencies(provider=args.provider)
 
-# ingester = DocumentIngester(vector_store)
-# ingester.ingest("textbooks/sol.pdf")
+    if args.ingest:
+        ingester.ingest("textbooks/sol.pdf")
 
-retriever = DocumentRetriever(vector_store)
-agent = RAGAgent(llm, retriever)
+    print("RAG pipeline ready. Type 'exit' to quit.")
+    while True:
+        query = input("\nAsk a question: ").strip()
+        if query.lower() == "exit":
+            break
+        if not query:
+            continue
+        print(agent.invoke(query))
 
-response = agent.invoke("Explain to me what question 10a is about")
-print(response)
+
+if __name__ == "__main__":
+    main()
