@@ -1,0 +1,28 @@
+==================================================
+Retrieval Metrics
+==================================================
+  MRR:               0.9048
+  nDCG:              0.8790
+  Keyword Coverage:  0.5219
+
+MRR by Category
+--------------------------------------------------
+  holistic                     1.0000  (n=1)
+  reasoning                    0.9500  (n=10)
+  spanning                     0.7833  (n=10)
+  unanswerable                 1.0000  (n=7)
+
+==================================================
+LLM-as-a-Judge Scores  (1–5 scale)
+==================================================
+  Accuracy         4.63 / 5
+  Relevance        4.93 / 5
+  Groundedness     4.70 / 5
+  Conciseness      4.70 / 5
+  Overall          4.74 / 5
+
+Low-score flag (≤2 on any criterion) — 2 question(s):
+--------------------------------------------------
+  [A:2  R:5  G:2  C:3]  'After all five assignment lines in the Pointers problem (#25'
+  [A:2  R:3  G:2  C:3]  'In Problem 21(d), why is the miss rate of Cache B equal to 1'
+==================================================

@@ -7,6 +7,7 @@ from pinecone import Pinecone
 from agent.rag_agent import RAGAgent
 from ingestion.rag_pipeline import DocumentIngester
 from retrieval.query_expander import QueryExpander
+from retrieval.reranker import LLMReranker
 from retrieval.vector_search import DocumentRetriever
 
 load_dotenv()
@@ -62,14 +63,15 @@ def build_llm(provider: str | None = None):
 
 def build_agent(provider: str | None = None) -> RAGAgent:
     """Create a fresh RAGAgent with its own LLM client. Safe to call per-thread."""
-    retriever = DocumentRetriever(_get_vector_store(), QueryExpander())
+    retriever = DocumentRetriever(_get_vector_store(), QueryExpander(), LLMReranker())
     return RAGAgent(_build_llm(provider), retriever)
 
 
 def build_dependencies(provider: str | None = None) -> tuple[DocumentIngester, DocumentRetriever, RAGAgent]:
     vector_store = _get_vector_store()
     expander = QueryExpander()
+    reranker = LLMReranker()
     ingester = DocumentIngester(vector_store)
-    retriever = DocumentRetriever(vector_store, expander)
+    retriever = DocumentRetriever(vector_store, expander, reranker)
     agent = build_agent(provider)
     return ingester, retriever, agent
