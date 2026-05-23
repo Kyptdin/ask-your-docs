@@ -222,3 +222,5 @@ md
 textbooks
 # Ingestion registry (local state, not for version control)
 app/ingestion/ingested_files.json
+
+CLAUDE.md

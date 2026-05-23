@@ -1,0 +1,260 @@
+{
+  "communities": {
+    "0": [
+      "app_evaluation_evaluator_py",
+      "basemodel",
+      "evaluation_evaluator_evaluator_compute_keyword_coverage",
+      "evaluation_evaluator_evaluator_compute_mrr",
+      "evaluation_evaluator_evaluator_compute_ndcg",
+      "evaluation_evaluator_evaluator_evaluate",
+      "models_eval_result_evalresult",
+      "models_judge_result_criterionscore",
+      "models_judge_result_judgeresult",
+      "models_judge_result_judgeresult_avg_score",
+      "models_test_question_from_dict",
+      "models_test_question_testquestion",
+      "models_test_question_testquestion_compute_metrics"
+    ],
+    "1": [
+      "app_config_build_agent",
+      "app_config_build_dependencies",
+      "app_config_build_llm",
+      "app_config_get_vector_store",
+      "app_config_py",
+      "app_config_rationale_32",
+      "app_config_rationale_58",
+      "app_config_rationale_63",
+      "app_main_main",
+      "app_main_py",
+      "app_run_evaluation_main",
+      "app_run_evaluation_py"
+    ],
+    "2": [
+      "app_evaluation_evaluation_runner_py",
+      "app_evaluation_llm_judge_py",
+      "evaluation_evaluation_runner_evaluationrunner_build_report",
+      "evaluation_evaluation_runner_evaluationrunner_init",
+      "evaluation_evaluation_runner_evaluationrunner_load_questions",
+      "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "evaluation_evaluation_runner_evaluationrunner_run",
+      "evaluation_evaluation_runner_evaluationrunner_save_results",
+      "evaluation_evaluation_runner_evaluationrunner_save_summary",
+      "evaluation_llm_judge_llmjudge",
+      "evaluation_llm_judge_llmjudge_init",
+      "evaluation_llm_judge_llmjudge_judge"
+    ],
+    "3": [
+      "agent_rag_agent_ragagent",
+      "agent_rag_agent_ragagent_init",
+      "agent_rag_agent_ragagent_invoke",
+      "app_agent_rag_agent_py",
+      "app_retrieval_vector_search_py",
+      "retrieval_vector_search_documentretriever",
+      "retrieval_vector_search_documentretriever_as_tool",
+      "retrieval_vector_search_documentretriever_init",
+      "retrieval_vector_search_documentretriever_retrieve"
+    ],
+    "4": [
+      "app_review_results_load_jsonl",
+      "app_review_results_main",
+      "app_review_results_pick_mode",
+      "app_review_results_prompt_next",
+      "app_review_results_py",
+      "app_review_results_rationale_25",
+      "app_review_results_review_judge",
+      "app_review_results_review_metrics",
+      "app_review_results_wrap"
+    ],
+    "5": [
+      "app_ingestion_rag_pipeline_py",
+      "ingestion_rag_pipeline_documentingester",
+      "ingestion_rag_pipeline_documentingester_ingest",
+      "ingestion_rag_pipeline_documentingester_init",
+      "ingestion_rag_pipeline_load_counter",
+      "ingestion_rag_pipeline_load_registry",
+      "ingestion_rag_pipeline_save_counter",
+      "ingestion_rag_pipeline_save_registry"
+    ],
+    "6": [
+      "app_rebuild_golden_chunks_build_chunks",
+      "app_rebuild_golden_chunks_main",
+      "app_rebuild_golden_chunks_py",
+      "app_rebuild_golden_chunks_rationale_1",
+      "app_rebuild_golden_chunks_rationale_37",
+      "app_rebuild_golden_chunks_score_chunks",
+      "app_rebuild_golden_chunks_tokenize"
+    ],
+    "7": [
+      "readme_ask_your_docs_pdf_qa_tool",
+      "readme_ollama",
+      "readme_pinecone",
+      "readme_rag_agent"
+    ],
+    "8": [
+      "claude_settings_local_json",
+      "claude_settings_local_permissions",
+      "claude_settings_local_permissions_allow"
+    ],
+    "9": [
+      "app_ingestion_chunk_counter_json",
+      "ingestion_chunk_counter_next"
+    ],
+    "10": [
+      "app_init_py"
+    ],
+    "11": [
+      "app_agent_init_py"
+    ],
+    "12": [
+      "app_evaluation_init_py"
+    ],
+    "13": [
+      "app_evaluation_models_init_py"
+    ],
+    "14": [
+      "app_retrieval_init_py"
+    ],
+    "15": [
+      "app_ingestion_init_py"
+    ],
+    "16": [
+      "result_1_retrieval_metrics"
+    ],
+    "17": [
+      "result_1_llm_as_a_judge_scores"
+    ]
+  },
+  "cohesion": {
+    "0": 0.24358974358974358,
+    "1": 0.24242424242424243,
+    "2": 0.25757575757575757,
+    "3": 0.2222222222222222,
+    "4": 0.4444444444444444,
+    "5": 0.39285714285714285,
+    "6": 0.47619047619047616,
+    "7": 0.5,
+    "8": 0.6666666666666666,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_config_build_agent",
+      "label": "build_agent()",
+      "degree": 8
+    },
+    {
+      "id": "app_config_build_dependencies",
+      "label": "build_dependencies()",
+      "degree": 7
+    },
+    {
+      "id": "retrieval_vector_search_documentretriever",
+      "label": "DocumentRetriever",
+      "degree": 7
+    },
+    {
+      "id": "evaluation_llm_judge_llmjudge",
+      "label": "LLMJudge",
+      "degree": 6
+    },
+    {
+      "id": "models_test_question_testquestion",
+      "label": "TestQuestion",
+      "degree": 6
+    },
+    {
+      "id": "app_review_results_main",
+      "label": "main()",
+      "degree": 5
+    },
+    {
+      "id": "agent_rag_agent_ragagent",
+      "label": "RAGAgent",
+      "degree": 5
+    },
+    {
+      "id": "models_judge_result_judgeresult",
+      "label": "JudgeResult",
+      "degree": 5
+    },
+    {
+      "id": "app_rebuild_golden_chunks_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "app_review_results_prompt_next",
+      "label": "_prompt_next()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "main()",
+      "target": "build_dependencies()",
+      "source_files": [
+        "app/main.py",
+        "app/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; peripheral node `main()` unexpectedly reaches hub `build_dependencies()`"
+    },
+    {
+      "source": "build_agent()",
+      "target": "DocumentRetriever",
+      "source_files": [
+        "app/config.py",
+        "app/retrieval/vector_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_agent()",
+      "target": "RAGAgent",
+      "source_files": [
+        "app/config.py",
+        "app/agent/rag_agent.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_dependencies()",
+      "target": "DocumentIngester",
+      "source_files": [
+        "app/config.py",
+        "app/ingestion/rag_pipeline.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "build_dependencies()",
+      "target": "DocumentRetriever",
+      "source_files": [
+        "app/config.py",
+        "app/retrieval/vector_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 1736,
+    "output": 817
+  }
+}

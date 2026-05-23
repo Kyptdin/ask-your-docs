@@ -1,0 +1,1978 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L1",
+      "id": "app_init_py",
+      "community": 10,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "rebuild_golden_chunks.py",
+      "file_type": "code",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L1",
+      "id": "app_rebuild_golden_chunks_py",
+      "community": 6,
+      "norm_label": "rebuild_golden_chunks.py"
+    },
+    {
+      "label": "tokenize()",
+      "file_type": "code",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L31",
+      "id": "app_rebuild_golden_chunks_tokenize",
+      "community": 6,
+      "norm_label": "tokenize()"
+    },
+    {
+      "label": "build_chunks()",
+      "file_type": "code",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L36",
+      "id": "app_rebuild_golden_chunks_build_chunks",
+      "community": 6,
+      "norm_label": "build_chunks()"
+    },
+    {
+      "label": "score_chunks()",
+      "file_type": "code",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L53",
+      "id": "app_rebuild_golden_chunks_score_chunks",
+      "community": 6,
+      "norm_label": "score_chunks()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L69",
+      "id": "app_rebuild_golden_chunks_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Rebuilds the golden_chunks field in golden_dataset.jsonl by matching each questi",
+      "file_type": "rationale",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L1",
+      "id": "app_rebuild_golden_chunks_rationale_1",
+      "community": 6,
+      "norm_label": "rebuilds the golden_chunks field in golden_dataset.jsonl by matching each questi"
+    },
+    {
+      "label": "Returns list of (chunk_id, page_content) in ingestion order.",
+      "file_type": "rationale",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L37",
+      "id": "app_rebuild_golden_chunks_rationale_37",
+      "community": 6,
+      "norm_label": "returns list of (chunk_id, page_content) in ingestion order."
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L1",
+      "id": "app_main_py",
+      "community": 1,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L6",
+      "id": "app_main_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "review_results.py",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L1",
+      "id": "app_review_results_py",
+      "community": 4,
+      "norm_label": "review_results.py"
+    },
+    {
+      "label": "_load_jsonl()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L12",
+      "id": "app_review_results_load_jsonl",
+      "community": 4,
+      "norm_label": "_load_jsonl()"
+    },
+    {
+      "label": "_wrap()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L19",
+      "id": "app_review_results_wrap",
+      "community": 4,
+      "norm_label": "_wrap()"
+    },
+    {
+      "label": "_prompt_next()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L24",
+      "id": "app_review_results_prompt_next",
+      "community": 4,
+      "norm_label": "_prompt_next()"
+    },
+    {
+      "label": "review_metrics()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L36",
+      "id": "app_review_results_review_metrics",
+      "community": 4,
+      "norm_label": "review_metrics()"
+    },
+    {
+      "label": "review_judge()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L61",
+      "id": "app_review_results_review_judge",
+      "community": 4,
+      "norm_label": "review_judge()"
+    },
+    {
+      "label": "pick_mode()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L90",
+      "id": "app_review_results_pick_mode",
+      "community": 4,
+      "norm_label": "pick_mode()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "app/review_results.py",
+      "source_location": "L106",
+      "id": "app_review_results_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Returns True to continue, False to stop.",
+      "file_type": "rationale",
+      "source_file": "app/review_results.py",
+      "source_location": "L25",
+      "id": "app_review_results_rationale_25",
+      "community": 4,
+      "norm_label": "returns true to continue, false to stop."
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L1",
+      "id": "app_config_py",
+      "community": 1,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "_get_vector_store()",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L16",
+      "id": "app_config_get_vector_store",
+      "community": 1,
+      "norm_label": "_get_vector_store()"
+    },
+    {
+      "label": "_build_llm()",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L31",
+      "id": "app_config_build_llm",
+      "community": 1,
+      "norm_label": "_build_llm()"
+    },
+    {
+      "label": "build_agent()",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L62",
+      "id": "app_config_build_agent",
+      "community": 1,
+      "norm_label": "build_agent()"
+    },
+    {
+      "label": "build_dependencies()",
+      "file_type": "code",
+      "source_file": "app/config.py",
+      "source_location": "L68",
+      "id": "app_config_build_dependencies",
+      "community": 1,
+      "norm_label": "build_dependencies()"
+    },
+    {
+      "label": "provider=None  \u2192 auto: use OpenAI if OPENAI_API_KEY is set, else Ollama     prov",
+      "file_type": "rationale",
+      "source_file": "app/config.py",
+      "source_location": "L32",
+      "id": "app_config_rationale_32",
+      "community": 1,
+      "norm_label": "provider=none  \u2192 auto: use openai if openai_api_key is set, else ollama     prov"
+    },
+    {
+      "label": "Public wrapper around _build_llm. Safe to call per-thread.",
+      "file_type": "rationale",
+      "source_file": "app/config.py",
+      "source_location": "L58",
+      "id": "app_config_rationale_58",
+      "community": 1,
+      "norm_label": "public wrapper around _build_llm. safe to call per-thread."
+    },
+    {
+      "label": "Create a fresh RAGAgent with its own LLM client. Safe to call per-thread.",
+      "file_type": "rationale",
+      "source_file": "app/config.py",
+      "source_location": "L63",
+      "id": "app_config_rationale_63",
+      "community": 1,
+      "norm_label": "create a fresh ragagent with its own llm client. safe to call per-thread."
+    },
+    {
+      "label": "run_evaluation.py",
+      "file_type": "code",
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L1",
+      "id": "app_run_evaluation_py",
+      "community": 1,
+      "norm_label": "run_evaluation.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L7",
+      "id": "app_run_evaluation_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "rag_agent.py",
+      "file_type": "code",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L1",
+      "id": "app_agent_rag_agent_py",
+      "community": 3,
+      "norm_label": "rag_agent.py"
+    },
+    {
+      "label": "RAGAgent",
+      "file_type": "code",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L14",
+      "id": "agent_rag_agent_ragagent",
+      "community": 3,
+      "norm_label": "ragagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L15",
+      "id": "agent_rag_agent_ragagent_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".invoke()",
+      "file_type": "code",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L22",
+      "id": "agent_rag_agent_ragagent_invoke",
+      "community": 3,
+      "norm_label": ".invoke()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/agent/__init__.py",
+      "source_location": "L1",
+      "id": "app_agent_init_py",
+      "community": 11,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "evaluator.py",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L1",
+      "id": "app_evaluation_evaluator_py",
+      "community": 0,
+      "norm_label": "evaluator.py"
+    },
+    {
+      "label": ".compute_mrr()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L8",
+      "id": "evaluation_evaluator_evaluator_compute_mrr",
+      "community": 0,
+      "norm_label": ".compute_mrr()"
+    },
+    {
+      "label": ".compute_ndcg()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L17",
+      "id": "evaluation_evaluator_evaluator_compute_ndcg",
+      "community": 0,
+      "norm_label": ".compute_ndcg()"
+    },
+    {
+      "label": ".compute_keyword_coverage()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L35",
+      "id": "evaluation_evaluator_evaluator_compute_keyword_coverage",
+      "community": 0,
+      "norm_label": ".compute_keyword_coverage()"
+    },
+    {
+      "label": ".evaluate()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L48",
+      "id": "evaluation_evaluator_evaluator_evaluate",
+      "community": 0,
+      "norm_label": ".evaluate()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/evaluation/__init__.py",
+      "source_location": "L1",
+      "id": "app_evaluation_init_py",
+      "community": 12,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "evaluation_runner.py",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L1",
+      "id": "app_evaluation_evaluation_runner_py",
+      "community": 2,
+      "norm_label": "evaluation_runner.py"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L17",
+      "id": "evaluation_evaluation_runner_evaluationrunner_init",
+      "community": 2,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._load_questions()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L24",
+      "id": "evaluation_evaluation_runner_evaluationrunner_load_questions",
+      "community": 2,
+      "norm_label": "._load_questions()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L33",
+      "id": "evaluation_evaluation_runner_evaluationrunner_run",
+      "community": 2,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._save_results()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L155",
+      "id": "evaluation_evaluation_runner_evaluationrunner_save_results",
+      "community": 2,
+      "norm_label": "._save_results()"
+    },
+    {
+      "label": "._build_report()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L192",
+      "id": "evaluation_evaluation_runner_evaluationrunner_build_report",
+      "community": 2,
+      "norm_label": "._build_report()"
+    },
+    {
+      "label": "._print_report()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L257",
+      "id": "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "community": 2,
+      "norm_label": "._print_report()"
+    },
+    {
+      "label": "._save_summary()",
+      "file_type": "code",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L265",
+      "id": "evaluation_evaluation_runner_evaluationrunner_save_summary",
+      "community": 2,
+      "norm_label": "._save_summary()"
+    },
+    {
+      "label": "llm_judge.py",
+      "file_type": "code",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L1",
+      "id": "app_evaluation_llm_judge_py",
+      "community": 2,
+      "norm_label": "llm_judge.py"
+    },
+    {
+      "label": "LLMJudge",
+      "file_type": "code",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L24",
+      "id": "evaluation_llm_judge_llmjudge",
+      "community": 2,
+      "norm_label": "llmjudge"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L25",
+      "id": "evaluation_llm_judge_llmjudge_init",
+      "community": 2,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".judge()",
+      "file_type": "code",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L28",
+      "id": "evaluation_llm_judge_llmjudge_judge",
+      "community": 2,
+      "norm_label": ".judge()"
+    },
+    {
+      "label": "EvalResult",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/eval_result.py",
+      "source_location": "L5",
+      "id": "models_eval_result_evalresult",
+      "community": 0,
+      "norm_label": "evalresult"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/__init__.py",
+      "source_location": "L1",
+      "id": "app_evaluation_models_init_py",
+      "community": 13,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "CriterionScore",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L4",
+      "id": "models_judge_result_criterionscore",
+      "community": 0,
+      "norm_label": "criterionscore"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel",
+      "community": 0,
+      "norm_label": "basemodel"
+    },
+    {
+      "label": "JudgeResult",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L9",
+      "id": "models_judge_result_judgeresult",
+      "community": 0,
+      "norm_label": "judgeresult"
+    },
+    {
+      "label": ".avg_score()",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L16",
+      "id": "models_judge_result_judgeresult_avg_score",
+      "community": 0,
+      "norm_label": ".avg_score()"
+    },
+    {
+      "label": "TestQuestion",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L9",
+      "id": "models_test_question_testquestion",
+      "community": 0,
+      "norm_label": "testquestion"
+    },
+    {
+      "label": ".compute_metrics()",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L21",
+      "id": "models_test_question_testquestion_compute_metrics",
+      "community": 0,
+      "norm_label": ".compute_metrics()"
+    },
+    {
+      "label": "from_dict()",
+      "file_type": "code",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L38",
+      "id": "models_test_question_from_dict",
+      "community": 0,
+      "norm_label": "from_dict()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/retrieval/__init__.py",
+      "source_location": "L1",
+      "id": "app_retrieval_init_py",
+      "community": 14,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "vector_search.py",
+      "file_type": "code",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L1",
+      "id": "app_retrieval_vector_search_py",
+      "community": 3,
+      "norm_label": "vector_search.py"
+    },
+    {
+      "label": "DocumentRetriever",
+      "file_type": "code",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L4",
+      "id": "retrieval_vector_search_documentretriever",
+      "community": 3,
+      "norm_label": "documentretriever"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L5",
+      "id": "retrieval_vector_search_documentretriever_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".as_tool()",
+      "file_type": "code",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L9",
+      "id": "retrieval_vector_search_documentretriever_as_tool",
+      "community": 3,
+      "norm_label": ".as_tool()"
+    },
+    {
+      "label": ".retrieve()",
+      "file_type": "code",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L25",
+      "id": "retrieval_vector_search_documentretriever_retrieve",
+      "community": 3,
+      "norm_label": ".retrieve()"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/ingestion/__init__.py",
+      "source_location": "L1",
+      "id": "app_ingestion_init_py",
+      "community": 15,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "chunk_counter.json",
+      "file_type": "code",
+      "source_file": "app/ingestion/chunk_counter.json",
+      "source_location": "L1",
+      "id": "app_ingestion_chunk_counter_json",
+      "community": 9,
+      "norm_label": "chunk_counter.json"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "app/ingestion/chunk_counter.json",
+      "source_location": "L1",
+      "id": "ingestion_chunk_counter_next",
+      "community": 9,
+      "norm_label": "next"
+    },
+    {
+      "label": "rag_pipeline.py",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L1",
+      "id": "app_ingestion_rag_pipeline_py",
+      "community": 5,
+      "norm_label": "rag_pipeline.py"
+    },
+    {
+      "label": "_load_registry()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L11",
+      "id": "ingestion_rag_pipeline_load_registry",
+      "community": 5,
+      "norm_label": "_load_registry()"
+    },
+    {
+      "label": "_save_registry()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L18",
+      "id": "ingestion_rag_pipeline_save_registry",
+      "community": 5,
+      "norm_label": "_save_registry()"
+    },
+    {
+      "label": "_load_counter()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L23",
+      "id": "ingestion_rag_pipeline_load_counter",
+      "community": 5,
+      "norm_label": "_load_counter()"
+    },
+    {
+      "label": "_save_counter()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L30",
+      "id": "ingestion_rag_pipeline_save_counter",
+      "community": 5,
+      "norm_label": "_save_counter()"
+    },
+    {
+      "label": "DocumentIngester",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L35",
+      "id": "ingestion_rag_pipeline_documentingester",
+      "community": 5,
+      "norm_label": "documentingester"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L36",
+      "id": "ingestion_rag_pipeline_documentingester_init",
+      "community": 5,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".ingest()",
+      "file_type": "code",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L44",
+      "id": "ingestion_rag_pipeline_documentingester_ingest",
+      "community": 5,
+      "norm_label": ".ingest()"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 8,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 8,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 8,
+      "norm_label": "allow"
+    },
+    {
+      "label": "Ask Your Docs \u2014 PDF Q&A Tool",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_ask_your_docs_pdf_qa_tool",
+      "community": 7,
+      "norm_label": "ask your docs \u2014 pdf q&a tool"
+    },
+    {
+      "label": "Pinecone",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://www.pinecone.io",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_pinecone",
+      "community": 7,
+      "norm_label": "pinecone"
+    },
+    {
+      "label": "Ollama",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://ollama.com",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_ollama",
+      "community": 7,
+      "norm_label": "ollama"
+    },
+    {
+      "label": "RAG agent",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_rag_agent",
+      "community": 7,
+      "norm_label": "rag agent"
+    },
+    {
+      "label": "Retrieval Metrics Result 1",
+      "file_type": "document",
+      "source_file": "app/evaluation/results/summaries/result_1.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "result_1_retrieval_metrics",
+      "community": 16,
+      "norm_label": "retrieval metrics result 1"
+    },
+    {
+      "label": "LLM-as-a-Judge Scores Result 1",
+      "file_type": "document",
+      "source_file": "app/evaluation/results/summaries/result_1.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "result_1_llm_as_a_judge_scores",
+      "community": 17,
+      "norm_label": "llm-as-a-judge scores result 1"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_py",
+      "target": "app_rebuild_golden_chunks_tokenize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_py",
+      "target": "app_rebuild_golden_chunks_build_chunks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_py",
+      "target": "app_rebuild_golden_chunks_score_chunks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_py",
+      "target": "app_rebuild_golden_chunks_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_rationale_1",
+      "target": "app_rebuild_golden_chunks_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_score_chunks",
+      "target": "app_rebuild_golden_chunks_tokenize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_main",
+      "target": "app_rebuild_golden_chunks_tokenize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_main",
+      "target": "app_rebuild_golden_chunks_build_chunks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_rationale_37",
+      "target": "app_rebuild_golden_chunks_build_chunks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/rebuild_golden_chunks.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "app_rebuild_golden_chunks_main",
+      "target": "app_rebuild_golden_chunks_score_chunks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_main_py",
+      "target": "app_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/main.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_main_main",
+      "target": "app_config_build_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_load_jsonl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_wrap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_prompt_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_review_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_review_judge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_pick_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "app_review_results_py",
+      "target": "app_review_results_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "app_review_results_main",
+      "target": "app_review_results_load_jsonl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "app_review_results_review_metrics",
+      "target": "app_review_results_wrap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "app_review_results_review_judge",
+      "target": "app_review_results_wrap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_review_results_review_metrics",
+      "target": "app_review_results_prompt_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "app_review_results_review_judge",
+      "target": "app_review_results_prompt_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "app_review_results_rationale_25",
+      "target": "app_review_results_prompt_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "app_review_results_main",
+      "target": "app_review_results_review_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "app_review_results_main",
+      "target": "app_review_results_review_judge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/review_results.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "app_review_results_main",
+      "target": "app_review_results_pick_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_config_py",
+      "target": "app_config_get_vector_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "app_config_py",
+      "target": "app_config_build_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "app_config_py",
+      "target": "app_config_build_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "app_config_py",
+      "target": "app_config_build_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "app_config_build_agent",
+      "target": "app_config_get_vector_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "app_config_build_dependencies",
+      "target": "app_config_get_vector_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "app_config_build_agent",
+      "target": "app_config_build_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "app_config_rationale_32",
+      "target": "app_config_build_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "app_config_rationale_58",
+      "target": "app_config_build_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "app_config_build_dependencies",
+      "target": "app_config_build_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app/config.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "app_config_rationale_63",
+      "target": "app_config_build_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/config.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "app_config_build_agent",
+      "target": "retrieval_vector_search_documentretriever"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/config.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "app_config_build_agent",
+      "target": "agent_rag_agent_ragagent"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "app_run_evaluation_main",
+      "target": "app_config_build_agent"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/config.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "app_config_build_dependencies",
+      "target": "ingestion_rag_pipeline_documentingester"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/config.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "app_config_build_dependencies",
+      "target": "retrieval_vector_search_documentretriever"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "app_run_evaluation_main",
+      "target": "app_config_build_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_run_evaluation_py",
+      "target": "app_run_evaluation_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/run_evaluation.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_run_evaluation_main",
+      "target": "app_evaluation_evaluation_runner_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_agent_rag_agent_py",
+      "target": "agent_rag_agent_ragagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "agent_rag_agent_ragagent",
+      "target": "agent_rag_agent_ragagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "agent_rag_agent_ragagent",
+      "target": "agent_rag_agent_ragagent_invoke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/agent/rag_agent.py",
+      "source_location": "L3",
+      "weight": 0.8,
+      "source": "agent_rag_agent_ragagent",
+      "target": "retrieval_vector_search_documentretriever",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluator_py",
+      "target": "evaluation_evaluator_evaluator_compute_mrr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluator_py",
+      "target": "evaluation_evaluator_evaluator_compute_ndcg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluator_py",
+      "target": "evaluation_evaluator_evaluator_compute_keyword_coverage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluator_py",
+      "target": "evaluation_evaluator_evaluator_evaluate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "app_evaluation_evaluator_py",
+      "target": "models_eval_result_evalresult",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "app_evaluation_evaluator_py",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "models_test_question_testquestion",
+      "target": "app_evaluation_evaluator_py",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_init",
+      "target": "app_evaluation_evaluator_py"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "models_test_question_testquestion_compute_metrics",
+      "target": "app_evaluation_evaluator_py"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "evaluation_evaluator_evaluator_evaluate",
+      "target": "evaluation_evaluator_evaluator_compute_mrr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "evaluation_evaluator_evaluator_evaluate",
+      "target": "evaluation_evaluator_evaluator_compute_ndcg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "evaluation_evaluator_evaluator_evaluate",
+      "target": "evaluation_evaluator_evaluator_compute_keyword_coverage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/evaluation/evaluator.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "evaluation_evaluator_evaluator_evaluate",
+      "target": "models_eval_result_evalresult"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_load_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_save_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_build_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_evaluation_runner_evaluationrunner_save_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "evaluation_llm_judge_llmjudge",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "app_evaluation_evaluation_runner_py",
+      "target": "models_test_question_testquestion",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_run",
+      "target": "evaluation_evaluation_runner_evaluationrunner_load_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_run",
+      "target": "evaluation_evaluation_runner_evaluationrunner_save_results",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_run",
+      "target": "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_run",
+      "target": "evaluation_llm_judge_llmjudge"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "target": "evaluation_evaluation_runner_evaluationrunner_build_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/evaluation_runner.py",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "evaluation_evaluation_runner_evaluationrunner_print_report",
+      "target": "evaluation_evaluation_runner_evaluationrunner_save_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "app_evaluation_llm_judge_py",
+      "target": "evaluation_llm_judge_llmjudge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "evaluation_llm_judge_llmjudge",
+      "target": "evaluation_llm_judge_llmjudge_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "evaluation_llm_judge_llmjudge",
+      "target": "evaluation_llm_judge_llmjudge_judge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/llm_judge.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "evaluation_llm_judge_llmjudge",
+      "target": "models_judge_result_judgeresult",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L3",
+      "weight": 0.8,
+      "source": "models_test_question_testquestion",
+      "target": "models_eval_result_evalresult",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "models_judge_result_judgeresult",
+      "target": "models_judge_result_criterionscore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "models_judge_result_criterionscore",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "models_judge_result_judgeresult",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/judge_result.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "models_judge_result_judgeresult",
+      "target": "models_judge_result_judgeresult_avg_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "models_test_question_testquestion",
+      "target": "models_judge_result_judgeresult",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "models_test_question_testquestion",
+      "target": "models_test_question_testquestion_compute_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/evaluation/models/test_question.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "models_test_question_testquestion",
+      "target": "models_test_question_from_dict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_retrieval_vector_search_py",
+      "target": "retrieval_vector_search_documentretriever",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "retrieval_vector_search_documentretriever",
+      "target": "retrieval_vector_search_documentretriever_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "retrieval_vector_search_documentretriever",
+      "target": "retrieval_vector_search_documentretriever_as_tool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/retrieval/vector_search.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "retrieval_vector_search_documentretriever",
+      "target": "retrieval_vector_search_documentretriever_retrieve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/chunk_counter.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_ingestion_chunk_counter_json",
+      "target": "ingestion_chunk_counter_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_ingestion_rag_pipeline_py",
+      "target": "ingestion_rag_pipeline_load_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "app_ingestion_rag_pipeline_py",
+      "target": "ingestion_rag_pipeline_save_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_ingestion_rag_pipeline_py",
+      "target": "ingestion_rag_pipeline_load_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "app_ingestion_rag_pipeline_py",
+      "target": "ingestion_rag_pipeline_save_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "app_ingestion_rag_pipeline_py",
+      "target": "ingestion_rag_pipeline_documentingester",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester_ingest",
+      "target": "ingestion_rag_pipeline_load_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester_ingest",
+      "target": "ingestion_rag_pipeline_save_registry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester_ingest",
+      "target": "ingestion_rag_pipeline_load_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester_ingest",
+      "target": "ingestion_rag_pipeline_save_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester",
+      "target": "ingestion_rag_pipeline_documentingester_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/ingestion/rag_pipeline.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "ingestion_rag_pipeline_documentingester",
+      "target": "ingestion_rag_pipeline_documentingester_ingest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ask_your_docs_pdf_qa_tool",
+      "target": "readme_pinecone"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ask_your_docs_pdf_qa_tool",
+      "target": "readme_ollama"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_ask_your_docs_pdf_qa_tool",
+      "target": "readme_rag_agent"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "b6866cb5297a372bf4bc3a955bc1cf43ee672c45"
+}
