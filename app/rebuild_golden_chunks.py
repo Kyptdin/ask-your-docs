@@ -15,7 +15,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 _APP_DIR = Path(__file__).parent
-DATASET_PATH = _APP_DIR / "evaluation" / "golden_dataset.jsonl"
+DATASET_PATH = _APP_DIR / "evaluation" / "data" / "golden_dataset.jsonl"
 TEXTBOOKS = [str(_APP_DIR.parent / "textbooks" / "sol.pdf")]  # keep in ingestion order
 
 STOPWORDS = {

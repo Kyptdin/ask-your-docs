@@ -1,0 +1,28 @@
+==================================================
+Retrieval Metrics
+==================================================
+  MRR:               0.9060
+  nDCG:              0.8683
+  Keyword Coverage:  0.4457
+
+MRR by Category
+--------------------------------------------------
+  holistic                     0.8333  (n=9)
+  reasoning                    1.0000  (n=10)
+  spanning                     0.7833  (n=10)
+  unanswerable                 1.0000  (n=10)
+
+==================================================
+LLM-as-a-Judge Scores  (1–5 scale)
+==================================================
+  Accuracy         4.63 / 5
+  Relevance        4.89 / 5
+  Groundedness     4.71 / 5
+  Conciseness      4.60 / 5
+  Overall          4.63 / 5
+
+Low-score flag (≤2 on any criterion) — 2 question(s):
+--------------------------------------------------
+  [A:2  R:5  G:2  C:5]  'Combine the conclusions of the Cache Simulation problem (#14'
+  [A:2  R:2  G:1  C:5]  'Which specific RISC-V hardware extension (e.g., RV32I, RV64I'
+==================================================

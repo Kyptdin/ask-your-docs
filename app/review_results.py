@@ -2,7 +2,7 @@ import json
 import textwrap
 from pathlib import Path
 
-RESULTS_DIR = Path(__file__).parent / "evaluation" / "results"
+RESULTS_DIR = Path(__file__).parent / "evaluation" / "results" / "data"
 METRICS_PATH = RESULTS_DIR / "metrics_results.jsonl"
 JUDGE_PATH = RESULTS_DIR / "judge_results.jsonl"
 

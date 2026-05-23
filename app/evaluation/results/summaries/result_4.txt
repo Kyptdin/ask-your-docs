@@ -1,0 +1,28 @@
+==================================================
+Retrieval Metrics
+==================================================
+  MRR:               0.9062
+  nDCG:              0.8427
+  Keyword Coverage:  0.4523
+
+MRR by Category
+--------------------------------------------------
+  holistic                     0.7250  (n=10)
+  reasoning                    1.0000  (n=10)
+  spanning                     0.9000  (n=10)
+  unanswerable                 1.0000  (n=10)
+
+==================================================
+LLM-as-a-Judge Scores  (1–5 scale)
+==================================================
+  Accuracy         4.55 / 5
+  Relevance        4.88 / 5
+  Groundedness     4.70 / 5
+  Conciseness      4.42 / 5
+  Overall          4.60 / 5
+
+Low-score flag (≤2 on any criterion) — 2 question(s):
+--------------------------------------------------
+  [A:2  R:5  G:3  C:4]  'After all five assignment lines in the Pointers problem (#25'
+  [A:1  R:4  G:1  C:5]  'Which specific RISC-V hardware extension (e.g., RV32I, RV64I'
+==================================================
