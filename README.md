@@ -1,18 +1,21 @@
 # Ask Your Docs — PDF Q&A Tool
 
-Upload PDFs and ask plain-language questions against them.
-Uses Pinecone for vector search, Ollama for local LLM inference, and a RAG agent to generate answers grounded in the uploaded documents.
+Upload a PDF and ask plain-language questions against it. Answers are grounded in the document with source citations.
 
 ---
 
-## Installation
+## Prerequisites
 
-**Prerequisites**
 - Python 3.11–3.13
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
-- [Ollama](https://ollama.com) running locally
+- A [Pinecone](https://www.pinecone.io) account (free tier works)
+- **One of:** an OpenAI API key (cloud) or [Ollama](https://ollama.com) running locally
 
-**1. Clone and install dependencies**
+---
+
+## Setup
+
+**1. Clone the repo and install dependencies**
 
 ```bash
 git clone <repo-url>
@@ -20,40 +23,58 @@ cd ask-your-docs
 uv sync
 ```
 
-**2. Configure environment variables**
-
-Create a `.env` file in the project root:
+**2. Create a `.env` file in the project root**
 
 ```env
+# Pinecone (required)
 PINECONE_API_KEY=your_pinecone_api_key
 PINECONE_INDEX=your_index_name
 PINECONE_MODEL=multilingual-e5-large
+
+# LLM — pick one of the two options below
+
+# Option A: OpenAI (cloud)
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_MODEL=gpt-4o-mini
+
+# Option B: Ollama (local, used only if OPENAI_API_KEY is not set)
 OLLAMA_MODEL=llama3
 ```
 
-**3. Pull your Ollama model**
+**3. If using Ollama, pull your model**
 
 ```bash
 ollama pull llama3
 ```
 
+**4. Add your PDF**
+
+Place the PDF you want to query inside the `textbooks/` folder.
+
 ---
 
 ## Running the App
 
-Place your PDF inside the `textbooks/` folder, then run:
+**First run — ingest the PDF and start Q&A:**
+
+```bash
+uv run ask-your-docs --ingest
+```
+
+**Subsequent runs — PDF already indexed, skip ingestion:**
 
 ```bash
 uv run ask-your-docs
 ```
 
-This ingests the PDF into Pinecone and starts an interactive question loop:
+You'll see an interactive prompt:
 
 ```
 RAG pipeline ready. Type 'exit' to quit.
 
 Ask a question: What is the purpose of the TLB?
-> The TLB (Translation Lookaside Buffer) is a cache for virtual-to-physical address translations...
+> The TLB (Translation Lookaside Buffer) is a cache for virtual-to-physical
+  address translations...
 ```
 
 Type `exit` to quit.
@@ -62,7 +83,7 @@ Type `exit` to quit.
 
 ## Running the Evaluation
 
-The evaluation suite runs 150 questions from the golden dataset through the full RAG pipeline and reports MRR, nDCG, and keyword coverage:
+Runs 150 questions from the golden dataset through the full pipeline and reports MRR, nDCG, and keyword coverage:
 
 ```bash
 uv run run-evaluation
@@ -77,11 +98,7 @@ Overall Results
   MRR:               0.6123
   nDCG:              0.5891
   Keyword Coverage:  0.7340
-
-MRR by Category
-----------------------------------------
-  multi_hop            0.5500  (n=42)
-  spanning             0.6800  (n=38)
-  unanswerable         1.0000  (n=70)
 ========================================
 ```
+
+Results are saved to `evaluation/results/`.
