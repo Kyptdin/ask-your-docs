@@ -1,4 +1,4 @@
-# Ask Your Docs — PDF Q&A Tool
+# 📄 Ask Your Docs — PDF Q&A Tool
 
 Upload a PDF and ask plain-language questions against it. Answers are grounded in the document with source citations.
 
